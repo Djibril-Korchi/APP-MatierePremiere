@@ -1,10 +1,13 @@
 package org.example.demo;
 import com.example.demo.HelloApplication;
+import javafx.scene.control.Label;
+
 import java.sql.*;
 
 public class bdd {
     private String mdp;
     private String email;
+    private Label button;
 public bdd( String email,String mdp){
     this.mdp=mdp;
     this.email=email;

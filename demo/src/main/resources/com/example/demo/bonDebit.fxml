@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.BonDebit">
+   <children>
+      <Text layoutX="133.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bon de débit matière">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="33.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom du Proffesseur :" />
+      <Text layoutX="33.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filière : " />
+      <Text layoutX="95.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TU :" />
+      <CheckBox layoutX="125.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
+      <Text layoutX="159.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPRP :" />
+      <CheckBox layoutX="201.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
+      <Text layoutX="226.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CQPM :" />
+      <CheckBox layoutX="273.0" layoutY="109.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
+   </children>
+</AnchorPane>
