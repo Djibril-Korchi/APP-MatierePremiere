@@ -8,16 +8,16 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="326.0" prefWidth="520.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="326.0" prefWidth="520.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.HelloController">
    <children>
       <ImageView fitHeight="207.0" fitWidth="193.0" layoutX="42.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: white;">
          <image>
-            <Image url="@../../../../../../../image/lprs.png" />
+            <Image url="@../../../../../../image/lprs.png" />
          </image>
       </ImageView>
-      <Pane fx:id="Connection" focusTraversable="true" layoutX="249.0" layoutY="-4.0" prefHeight="333.0" prefWidth="271.0" style="-fx-background-color: black;">
+      <Pane focusTraversable="true" layoutX="249.0" layoutY="-4.0" prefHeight="333.0" prefWidth="271.0" style="-fx-background-color: black;">
          <children>
-            <Button fx:id="welcomeText" layoutX="80.0" layoutY="227.0" mnemonicParsing="false" text="Connection" />
+            <Button fx:id="button" layoutX="80.0" layoutY="227.0" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Connection" />
             <Text fill="WHITE" layoutX="44.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" />
             <PasswordField fx:id="mdp" layoutX="43.0" layoutY="154.0" />
             <Text fill="WHITE" layoutX="44.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de Passe" />

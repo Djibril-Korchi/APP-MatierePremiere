@@ -13,7 +13,7 @@ public class HelloApplication extends Application {
         maStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 300);
-        stage.setTitle("Connection");
+        stage.setTitle("dki_lestrelin");
         stage.setScene(scene);
         stage.show();
     }

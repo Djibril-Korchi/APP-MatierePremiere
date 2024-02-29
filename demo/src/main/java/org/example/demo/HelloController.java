@@ -1,6 +1,7 @@
 package org.example.demo;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import org.example.demo.bdd;
@@ -11,7 +12,7 @@ public class HelloController {
     @FXML
     private TextField mdp;
     @FXML
-    private Label Connection;
+    private Button button;
 
     @FXML
     protected void onHelloButtonClick() {
