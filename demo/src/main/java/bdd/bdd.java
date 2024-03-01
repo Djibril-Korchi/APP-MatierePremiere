@@ -42,8 +42,11 @@ public bdd( String email,String mdp){
             requetePrepare.setString(2,getMdp());
             ResultSet connection = requetePrepare.executeQuery();
             if (connection.next()){
-                helloApplication.sceneConnexion("interface");
-
+                if (connection.getInt(6)==1){
+                    helloApplication.sceneConnexion("interfaceAdmin");
+                }else {
+                    helloApplication.sceneConnexion("interface");
+                }
             }else{
                 helloApplication.sceneConnexion("hello-view");
             }
