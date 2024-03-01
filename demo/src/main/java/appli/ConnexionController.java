@@ -20,11 +20,12 @@ public class ConnexionController {
     protected void onHelloButtonClick() {
         String email = this.email.getText();
         String mdp = this.mdp.getText();
-        bdd bdd = new bdd(email,mdp);
+        bdd bdd = new bdd(email, mdp);
         try {
             bdd.connection();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
+}
    

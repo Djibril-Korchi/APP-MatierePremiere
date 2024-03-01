@@ -17,6 +17,8 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    public static void sceneConnexion(String fxml) {
+        maStage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxml + ".fxml"));
         Scene scene = null;
         try {
