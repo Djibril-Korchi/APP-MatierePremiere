@@ -28,7 +28,3 @@ public class ConnexionController {
         }
     }
 }
-<<<<<<< HEAD
-=======
-   
->>>>>>> d66f1fa35760ff7e549a531d2f5e27af6d562946
