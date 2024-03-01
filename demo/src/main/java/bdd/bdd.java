@@ -1,5 +1,5 @@
-package org.example.demo;
-import com.example.demo.HelloApplication;
+package bdd;
+import appli.HelloApplication;
 import javafx.scene.control.Label;
 
 import java.sql.*;
@@ -27,9 +27,9 @@ public bdd( String email,String mdp){
     }
 
 
-    public void connection()  {
+    public void connection() throws SQLException {
     HelloApplication helloApplication= new HelloApplication();
-        try {
+
             Connection maConnection = null;
             maConnection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/dki_lestrelin","root","");
@@ -47,9 +47,7 @@ public bdd( String email,String mdp){
             }else{
                 helloApplication.sceneConnexion("hello-view");
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+
 
     }
 }

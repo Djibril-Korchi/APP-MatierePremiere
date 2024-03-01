@@ -1,24 +1,30 @@
-package org.example.demo;
+package appli;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.example.demo.bdd;
+import bdd.bdd;
 
-public class HelloController {
+import java.sql.SQLException;
+
+public class ConnexionController {
     @FXML
     private TextField email;
     @FXML
     private TextField mdp;
     @FXML
     private Button button;
+    private Button bon;
 
     @FXML
     protected void onHelloButtonClick() {
         String email = this.email.getText();
         String mdp = this.mdp.getText();
         bdd bdd = new bdd(email,mdp);
-        bdd.connection();
+        try {
+            bdd.connection();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
-}
+   

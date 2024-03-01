@@ -11,8 +11,8 @@ module com.example.demo {
     requires eu.hansolo.tilesfx;
     requires java.sql;
 
-    opens com.example.demo to javafx.fxml;
-    exports com.example.demo;
-    exports org.example.demo;
-    opens org.example.demo to javafx.fxml;
+    exports bdd;
+    opens bdd to javafx.fxml;
+    exports appli;
+    opens appli to javafx.fxml;
 }

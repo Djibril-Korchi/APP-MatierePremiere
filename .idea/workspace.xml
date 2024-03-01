@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4ef03078-77e2-4d21-b99c-4086a80a1635" name="Changes" comment="" />
+=======
+    <list default="true" id="eb6fe192-cd8e-4ac1-b77c-6b33ec30dbb8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demo/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/org/example/demo/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demo/bdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/org/example/demo/bdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/example/demo/interface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/example/demo/interface.fxml" afterDir="false" />
+    </list>
+>>>>>>> 72ff436e5017e4d2b922d0727e34fd41dddf3906
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,9 +22,15 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
+<<<<<<< HEAD
   "associatedIndex": 3
 }]]></component>
   <component name="ProjectId" id="2ctoATWyhfrmes2XxuDuIaiInsy" />
+=======
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2czLncjYGKgD4NP78Dw9ulNMhMm" />
+>>>>>>> 72ff436e5017e4d2b922d0727e34fd41dddf3906
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,21 +39,36 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/wamp64/www/APP-MatierePremiere/demo",
+=======
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/wamp64/www/APP-MatierePremiere/demo",
+    "nodejs_package_manager_path": "npm",
+>>>>>>> 72ff436e5017e4d2b922d0727e34fd41dddf3906
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="4ef03078-77e2-4d21-b99c-4086a80a1635" name="Changes" comment="" />
       <created>1708940091851</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708940091851</updated>
       <workItem from="1708940092864" duration="21000" />
+=======
+      <changelist id="eb6fe192-cd8e-4ac1-b77c-6b33ec30dbb8" name="Changes" comment="" />
+      <created>1709109629053</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709109629053</updated>
+      <workItem from="1709109630155" duration="10000" />
+>>>>>>> 72ff436e5017e4d2b922d0727e34fd41dddf3906
     </task>
     <servers />
   </component>
