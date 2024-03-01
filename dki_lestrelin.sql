@@ -32,8 +32,7 @@ CREATE TABLE IF NOT EXISTS `classe` (
   `id_classe` int NOT NULL,
   `libelle` varchar(50) NOT NULL,
   `ref_filiere` int NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
+) 
 -- --------------------------------------------------------
 
 --
@@ -61,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `concerne` (
   `ref_piece` int NOT NULL,
   KEY `fk_concerne_debit` (`ref_debit`),
   KEY `fk_concerne_piece` (`ref_piece`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -78,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `debit` (
   `ref_classe` int NOT NULL,
   `ref_user` int NOT NULL,
   KEY `fk_debit_user` (`ref_user`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -90,7 +89,7 @@ DROP TABLE IF EXISTS `filiere`;
 CREATE TABLE IF NOT EXISTS `filiere` (
   `id_filiere` int NOT NULL,
   `libelle` int NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -103,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `forme` (
   `id_forme` int NOT NULL,
   `forme` varchar(50) NOT NULL,
   `diametre` int NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -120,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `fournisseur` (
   `cp` varchar(7) NOT NULL,
   `num` varchar(13) NOT NULL,
   `email` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -132,7 +131,7 @@ DROP TABLE IF EXISTS `lier`;
 CREATE TABLE IF NOT EXISTS `lier` (
   `ref_commande` int NOT NULL,
   `ref_matiere` int NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -145,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `materiaux` (
   `id_materiaux` int NOT NULL,
   `type_matériaux` varchar(50) NOT NULL,
   `quantite` int NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -161,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `matiere` (
   `prix` float NOT NULL,
   `ref_fournisseure` int NOT NULL,
   `ref_forme` int NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -175,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `piece` (
   `libelle` varchar(50) NOT NULL,
   `image` text NOT NULL,
   `ref_system` int NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -189,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `possede` (
   `ref_materiaux` int NOT NULL,
   KEY `fk_debit_matiere` (`ref_matiere`),
   KEY `fk_debit_materiaux` (`ref_materiaux`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -201,7 +200,7 @@ DROP TABLE IF EXISTS `status`;
 CREATE TABLE IF NOT EXISTS `status` (
   `id_status` int NOT NULL,
   `role` varchar(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 --
 -- Déchargement des données de la table `status`
@@ -221,7 +220,7 @@ CREATE TABLE IF NOT EXISTS `system` (
   `id_system` int NOT NULL,
   `libelle` varchar(50) NOT NULL,
   `image` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -237,7 +236,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(50) NOT NULL,
   `mdp` varchar(50) NOT NULL,
   `ref_status` int NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 --
 -- Déchargement des données de la table `user`
