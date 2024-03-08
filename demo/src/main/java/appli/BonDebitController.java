@@ -9,6 +9,7 @@ public class BonDebitController {
     @FXML
     private Button retour;
 
+    @FXML
     private Button valider;
 
     @FXML

@@ -34,9 +34,9 @@ public bdd( String email,String mdp){
         Connection maConnection = null;
         maConnection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/dki_lestrelin","root","");
-
+        PreparedStatement requetePrepare = null;
         Statement requeteSimple = maConnection.createStatement();
-        PreparedStatement requetePrepare = maConnection.prepareStatement(
+        requetePrepare = maConnection.prepareStatement(
                 "SELECT * FROM user WHERE email=? and mdp=?"
         );
         requetePrepare.setString(1,getEmail());
