@@ -13,20 +13,21 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Button layoutX="250.0" layoutY="158.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="99.0" text="Ajouter">
+      <Button fx:id="ajouter" layoutX="250.0" layoutY="158.0" mnemonicParsing="false" onAction="#onClickAjouter" prefHeight="48.0" prefWidth="99.0" text="Ajouter">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="410.0" layoutY="158.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="110.0" text="Supprimer">
+      <Button fx:id="supprimer" layoutX="410.0" layoutY="158.0" mnemonicParsing="false" onAction="#onClickSuprimer" prefHeight="48.0" prefWidth="110.0" text="Supprimer">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="85.0" layoutY="158.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="99.0" text="Modifier">
+      <Button fx:id="modifier" layoutX="85.0" layoutY="158.0" mnemonicParsing="false" onAction="#onClickModifier" prefHeight="48.0" prefWidth="99.0" text="Modifier">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
+      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" text="Retour" />
    </children>
 </AnchorPane>
