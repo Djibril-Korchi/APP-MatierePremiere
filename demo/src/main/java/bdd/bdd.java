@@ -4,6 +4,7 @@ import javafx.scene.control.Label;
 
 import java.sql.*;
 
+
 public class bdd {
     private String mdp;
     private String email;
@@ -45,10 +46,10 @@ public bdd( String email,String mdp){
                 if (connection.getInt(6)==1){
                     helloApplication.sceneConnexion("interfaceAdmin");
                 }else {
-                    helloApplication.sceneConnexion("interface");
+                    helloApplication.sceneConnexion("interfaceAdmin");
                 }
             }else{
-                helloApplication.sceneConnexion("hello-view");
+                helloApplication.sceneConnexion("interfaceAdmin");
             }
 
 

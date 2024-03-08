@@ -1,18 +1,18 @@
 package appli;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 public class DemandePrixControlleur {
 
-private Button retour;
+    @FXML
+    private Button valider;
 
-
-void onClickRetour(ActionEvent event) {
-    HelloApplication helloApplication = new HelloApplication();
-    helloApplication.sceneConnexion("interface");
-
-
-}
+    @FXML
+    void onClickValider(ActionEvent event) {
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("interface");
+    }
 
 }
