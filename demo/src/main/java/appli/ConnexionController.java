@@ -27,4 +27,8 @@ public class ConnexionController {
             throw new RuntimeException(e);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4785bc8b865579c63714dd92ee819cee9e07a538
