@@ -21,15 +21,7 @@ public class ConnexionController {
         String email = this.email.getText();
         String mdp = this.mdp.getText();
         bdd bdd = new bdd(email, mdp);
-<<<<<<< HEAD
         bdd.connection();
     }
 }
-=======
-        try {
-            bdd.connection();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }}
->>>>>>> a1ae05718865038909a2dd6b04eac649aeecb05b
+
