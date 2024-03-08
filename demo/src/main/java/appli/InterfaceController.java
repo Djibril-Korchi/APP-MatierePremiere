@@ -13,6 +13,6 @@ public class InterfaceController {
     void onClick(ActionEvent event) {
 
         HelloApplication helloApplication= new HelloApplication();
-        helloApplication.sceneConnexion("bonDebit");
+        helloApplication.sceneConnexion("interface");
     }
 }
