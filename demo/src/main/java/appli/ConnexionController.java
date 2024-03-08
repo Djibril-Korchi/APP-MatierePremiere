@@ -17,18 +17,10 @@ public class ConnexionController {
     private Button bon;
 
     @FXML
-    protected void onHelloButtonClick() {
+    protected void onHelloButtonClick() throws SQLException {
         String email = this.email.getText();
         String mdp = this.mdp.getText();
         bdd bdd = new bdd(email, mdp);
-        try {
-            bdd.connection();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        bdd.connection();
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 4785bc8b865579c63714dd92ee819cee9e07a538

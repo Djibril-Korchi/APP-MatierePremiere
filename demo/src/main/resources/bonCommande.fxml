@@ -119,11 +119,6 @@
       <TextField layoutX="728.0" layoutY="754.0" prefHeight="25.0" prefWidth="67.0" />
       <TextField layoutX="728.0" layoutY="782.0" prefHeight="25.0" prefWidth="67.0" />
       <TextField layoutX="728.0" layoutY="810.0" prefHeight="25.0" prefWidth="67.0" />
-      <ImageView fitHeight="200.0" fitWidth="154.0" layoutX="677.0" layoutY="51.0">
-         <image>
-            <Image url="@../../../../../../../Users/rayan/Downloads/50-Lycee-Robert-Schuman-removebg-preview.png" />
-         </image>
-      </ImageView>
       <TextArea layoutX="26.0" layoutY="850.0" prefHeight="90.0" prefWidth="539.0" text="Conditions De Règlement :&#10;" />
       <Text layoutX="569.0" layoutY="863.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total HT " wrappingWidth="141.57891845703125" />
       <Text layoutX="569.0" layoutY="885.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TVA" wrappingWidth="51.111328125" />
