@@ -26,5 +26,4 @@ public class ConnexionController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-    }
-}
+    }}
