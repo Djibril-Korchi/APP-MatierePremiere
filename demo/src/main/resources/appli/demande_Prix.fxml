@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.DemandePrix">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.DemandePrixControlleur">
    <children>
       <Accordion />
       <TableView prefHeight="200.0" prefWidth="600.0">
@@ -47,6 +47,6 @@
             <Text layoutX="39.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEMANDE DE PRIX" wrappingWidth="114.01692962646484" />
          </children>
       </Pane>
-      <Button layoutX="6.0" layoutY="362.0" mnemonicParsing="false" text="Retour" />
+      <Button fx:id="BoutonRetour" layoutX="6.0" layoutY="362.0" mnemonicParsing="false" onAction="#onClickRetour" text="Retour" />
    </children>
 </AnchorPane>
