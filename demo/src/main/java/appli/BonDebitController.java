@@ -10,6 +10,7 @@ public class BonDebitController {
     private Button retour;
 
     @FXML
+<<<<<<< HEAD
     private Button valider;
 
     @FXML
@@ -20,6 +21,11 @@ public class BonDebitController {
     @FXML
     void onClickValider(ActionEvent event) {
 
+=======
+    void OnClickRetour(ActionEvent event) {
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("InterfaceAdmin.fxml");
+>>>>>>> a1ae05718865038909a2dd6b04eac649aeecb05b
     }
 
 }
