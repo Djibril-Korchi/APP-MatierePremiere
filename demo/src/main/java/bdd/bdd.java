@@ -29,29 +29,27 @@ public bdd( String email,String mdp){
 
 
     public void connection() throws SQLException {
-    HelloApplication helloApplication= new HelloApplication();
+        HelloApplication helloApplication= new HelloApplication();
 
-            Connection maConnection = null;
-            maConnection = DriverManager.getConnection(
+        Connection maConnection = null;
+        maConnection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/dki_lestrelin","root","");
-            PreparedStatement requetePrepare = null;
-            Statement requeteSimple = maConnection.createStatement();
-            requetePrepare = maConnection.prepareStatement(
-                    "SELECT * FROM user WHERE email=? and mdp=?"
-            );
-            requetePrepare.setString(1,getEmail());
-            requetePrepare.setString(2,getMdp());
-            ResultSet connection = requetePrepare.executeQuery();
-            if (connection.next()){
-                if (connection.getInt(6)==1){
-                    helloApplication.sceneConnexion("interfaceAdmin");
-                }else {
-                    helloApplication.sceneConnexion("interfaceAdmin");
-                }
-            }else{
+
+        Statement requeteSimple = maConnection.createStatement();
+        PreparedStatement requetePrepare = maConnection.prepareStatement(
+                "SELECT * FROM user WHERE email=? and mdp=?"
+        );
+        requetePrepare.setString(1,getEmail());
+        requetePrepare.setString(2,getMdp());
+        ResultSet connection = requetePrepare.executeQuery();
+        if (connection.next()){
+            if (connection.getInt(6)==1){
+                helloApplication.sceneConnexion("interface");
+            }else {
                 helloApplication.sceneConnexion("interfaceAdmin");
             }
-
-
+        }else{
+            helloApplication.sceneConnexion("connexion");
+        }
     }
 }
