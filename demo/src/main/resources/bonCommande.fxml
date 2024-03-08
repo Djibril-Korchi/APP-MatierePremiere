@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="996.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="996.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BonCommandeControlleur">
    <children>
       <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="808.0" style="-fx-background-size: 15;" text="                                          Lycée  et UFA Robert Schuman 5 Avenue du Général de Gaulle 93440 Dugny">
          <font>
@@ -142,5 +142,6 @@
          </children>
       </Pane>
       <Button fx:id="valider" layoutX="787.0" layoutY="957.0" mnemonicParsing="false" onAction="#onClickValider" text="Valider" />
+      <Button fx:id="retour" layoutX="18.0" layoutY="957.0" mnemonicParsing="false" onAction="#OnclickRetour" text="Retour" />
    </children>
 </Pane>
