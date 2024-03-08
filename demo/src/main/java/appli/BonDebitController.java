@@ -14,18 +14,12 @@ public class BonDebitController {
 
     @FXML
     void onActionRetour(ActionEvent event) {
-
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("interfaceAdmin");
     }
 
     @FXML
     void onClickValider(ActionEvent event) {
-
-    }
-
-
-    void OnClickRetour(ActionEvent event) {
-        HelloApplication helloApplication = new HelloApplication();
-        helloApplication.sceneConnexion("InterfaceAdmin.fxml");
 
     }
 

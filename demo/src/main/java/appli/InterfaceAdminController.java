@@ -24,7 +24,7 @@ public class InterfaceAdminController {
     @FXML
     void OnClickBonCommande(ActionEvent event) {
         HelloApplication helloApplication =new HelloApplication();
-        helloApplication.sceneConnexion("bonCommande");
+        helloApplication.gitsceneConnexion("bonCommande");
     }
 
     @FXML
@@ -36,13 +36,13 @@ public class InterfaceAdminController {
     @FXML
     void OnclickEtat(ActionEvent event) {
         HelloApplication helloApplication =new HelloApplication();
-        helloApplication.sceneConnexion("etatStock");
+        helloApplication.sceneConnexion("interface");
     }
 
     @FXML
     void OnclickMaj(ActionEvent event) {
         HelloApplication helloApplication =new HelloApplication();
-        helloApplication.sceneConnexion("majBdd");
+        helloApplication.sceneConnexion("interface");
     }
 
     @FXML
