@@ -24,7 +24,7 @@ public class InterfaceAdminController {
     @FXML
     void OnClickBonCommande(ActionEvent event) {
         HelloApplication helloApplication =new HelloApplication();
-        helloApplication.gitsceneConnexion("bonCommande");
+        helloApplication.sceneConnexion("bonCommande");
     }
 
     @FXML
