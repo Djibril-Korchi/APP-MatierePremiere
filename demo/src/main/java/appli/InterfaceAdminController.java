@@ -48,7 +48,7 @@ public class InterfaceAdminController {
     @FXML
     void onClickAdmin(ActionEvent event) {
         HelloApplication helloApplication =new HelloApplication();
-        helloApplication.sceneConnexion("interfaceAdmin");
+        helloApplication.sceneConnexion("Admin");
     }
 
 }
