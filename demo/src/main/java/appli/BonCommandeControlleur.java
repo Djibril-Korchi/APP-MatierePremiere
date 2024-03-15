@@ -15,13 +15,13 @@ public class BonCommandeControlleur {
 
     @FXML
     void OnclickRetour(ActionEvent event) {
-
+        HelloApplication helloApplication= new HelloApplication();
+        helloApplication.sceneConnexion("interfaceAdmin");
     }
 
     @FXML
     void onClickValider(ActionEvent event) {
-        HelloApplication helloApplication= new HelloApplication();
-        helloApplication.sceneConnexion("interfaceAdmin");
+
 
     }
 

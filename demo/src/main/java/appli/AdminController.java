@@ -20,7 +20,8 @@ public class AdminController {
 
     @FXML
     void onClickAjouter(ActionEvent event) {
-
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("FormulaireAjouterUser");
     }
 
     @FXML
@@ -30,7 +31,8 @@ public class AdminController {
 
     @FXML
     void onClickRetour(ActionEvent event) {
-
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("interfaceAdmin");
     }
 
     @FXML
