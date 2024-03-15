@@ -1,9 +1,12 @@
 package appli;
 
 import appli.HelloApplication;
+import appli.user.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+
+import java.sql.SQLException;
 
 public class BonCommandeControlleur {
 
@@ -14,11 +17,10 @@ public class BonCommandeControlleur {
     private Button valider;
 
     @FXML
-    void OnclickRetour(ActionEvent event) {
-        HelloApplication helloApplication= new HelloApplication();
-        helloApplication.sceneConnexion("interfaceAdmin");
+    void onActionRetour(ActionEvent event) throws SQLException {
+        User user = new User();
+        user.status();
     }
-
     @FXML
     void onClickValider(ActionEvent event) {
 
