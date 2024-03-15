@@ -16,6 +16,9 @@ public class User {
         this.email = email;
         this.mdp = mdp;
     }
+    public User(){
+        
+    }
     public void status() throws SQLException {
         Bdd bdd = new Bdd();
         HelloApplication helloApplication= new HelloApplication();
@@ -23,8 +26,8 @@ public class User {
         PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
                 "SELECT * FROM user WHERE email=? and mdp=?"
         );
-        requetePrepare.setString(1,email);
-        requetePrepare.setString(2,mdp);
+        requetePrepare.setString(1,this.email);
+        requetePrepare.setString(2,this.mdp);
         ResultSet connection = requetePrepare.executeQuery();
         if (connection.getInt(6)==1){
             helloApplication.sceneConnexion("interfaceAdmin");
