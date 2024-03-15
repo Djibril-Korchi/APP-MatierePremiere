@@ -1,5 +1,6 @@
 package appli;
 
+import appli.user.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -20,6 +21,7 @@ public class ConnexionController {
     protected void onHelloButtonClick() throws SQLException {
         String email = this.email.getText();
         String mdp = this.mdp.getText();
+        User user = new User(email,mdp);
         Bdd bdd = new Bdd();
         HelloApplication helloApplication= new HelloApplication();
         Statement requeteSimple = bdd.getMaConnection().createStatement();

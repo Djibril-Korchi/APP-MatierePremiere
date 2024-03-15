@@ -1,8 +1,11 @@
 package appli;
 
+import appli.user.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+
+import java.sql.SQLException;
 
 public class DemandePrixControlleur {
 
@@ -10,9 +13,9 @@ public class DemandePrixControlleur {
     private Button valider;
 
     @FXML
-    void onClickValider(ActionEvent event) {
-        HelloApplication helloApplication = new HelloApplication();
-        helloApplication.sceneConnexion("interface");
+    void onActionRetour(ActionEvent event) throws SQLException {
+        User user = new User();
+        user.status();
     }
 
 }

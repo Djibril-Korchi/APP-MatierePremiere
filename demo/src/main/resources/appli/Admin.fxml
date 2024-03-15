@@ -22,6 +22,6 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" text="Retour" />
+      <Button fx:id="retour" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#onClickRetour" text="Retour" />
    </children>
 </AnchorPane>
