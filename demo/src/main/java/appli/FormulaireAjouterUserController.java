@@ -4,12 +4,11 @@ import bdd.Bdd;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -17,19 +16,21 @@ public class FormulaireAjouterUserController {
 
     @FXML
     private RadioButton admin;
+
+    @FXML
+    private TextField email;
+
+    @FXML
+    private TextField mdp;
+
+    @FXML
+    private TextField nom;
+
+    @FXML
+    private TextField prenom;
+
     @FXML
     private RadioButton professeur;
-    @FXML
-    private TextArea email;
-
-    @FXML
-    private TextArea mdp;
-
-    @FXML
-    private TextArea nom;
-
-    @FXML
-    private TextArea prenom;
 
     @FXML
     private Button retour;
@@ -45,15 +46,16 @@ public class FormulaireAjouterUserController {
 
     @FXML
     void onClickValider(ActionEvent event) throws SQLException {
-        String nom = this.nom+"";
-        String prenom =this.prenom+"";
-        String email =this.email+"";
-        String mdp = this.mdp+"";
+        String nom = this.nom.getText();
+        String prenom =this.prenom.getText()+"";
+        String email =this.email.getText()+"";
+        String mdp = this.mdp.getText()+"";
+
         int status = 0;
-        if(admin.isSelected()){
-            status = 2;
-        } else if (professeur.isSelected()) {
+        if(admin.isSelected() ){
             status = 1;
+        } else if (professeur.isSelected()) {
+            status = 2;
         }
         HelloApplication helloApplication = new HelloApplication();
         Bdd bdd = new Bdd();
@@ -66,7 +68,7 @@ public class FormulaireAjouterUserController {
         requetePrepare.setString(3,email);
         requetePrepare.setString(4,mdp);
         requetePrepare.setInt(5,status);
-        ResultSet connection = requetePrepare.executeQuery();
+        requetePrepare.executeUpdate();
         helloApplication.sceneConnexion("Admin");
     }
 }
