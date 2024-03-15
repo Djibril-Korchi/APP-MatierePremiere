@@ -43,16 +43,11 @@ public class FormulaireAjouterUserController {
     }
 
     @FXML
-    void onClickValider(ActionEvent event) throws SQLException {
-        String nom = this.nom+"";
-        String prenom =this.prenom+"";
-        String email =this.email+"";
-        String mdp = this.mdp+"";
-        if(){
-            int ref = 1;
-        } else if () {
-            
-        }
+        void onClickValider(ActionEvent event) throws SQLException {
+            String nom = this.nom+"";
+            String prenom =this.prenom+"";
+            String email =this.email+"";
+            String mdp = this.mdp+"";
         HelloApplication helloApplication = new HelloApplication();
         Bdd bdd = new Bdd();
         Statement requeteSimple = bdd.getMaConnection().createStatement();
