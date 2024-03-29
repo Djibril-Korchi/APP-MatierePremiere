@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<<<<<<< HEAD
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+=======
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+>>>>>>> 2ed14ed91dbb1449e6f5c1f53003eccf1be6b675
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="580.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.FormulaireAjouterUserController">
+   <children>
+      <Text layoutX="180.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter des Utilisateurs " wrappingWidth="363.50042724609375">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <Text layoutX="28.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="28.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom : " wrappingWidth="58.9189453125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="28.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email : " wrappingWidth="58.9189453125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="28.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe : " wrappingWidth="58.9189453125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="28.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statut : " wrappingWidth="58.9189453125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+<<<<<<< HEAD
+      <CheckBox layoutX="126.0" layoutY="404.0" mnemonicParsing="false" text="Admin" />
+      <CheckBox layoutX="238.0" layoutY="404.0" mnemonicParsing="false" text="Utilisateurs" />
+      <Button layoutX="197.0" layoutY="467.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" text="Valider" />
+=======
+      <Button fx:id="valider" layoutX="197.0" layoutY="467.0" mnemonicParsing="false" onAction="#onClickValider" prefHeight="39.0" prefWidth="82.0" text="Valider" />
+      <ImageView fitHeight="170.0" fitWidth="160.0" layoutX="576.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: white;">
+         <image>
+            <Image url="@../../../../image/lprs.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="retour" layoutX="14.0" layoutY="540.0" mnemonicParsing="false" onAction="#OnClickRetour" text="Retour" />
+      <RadioButton fx:id="admin" layoutX="118.0" layoutY="404.0" mnemonicParsing="false" text="Admin" />
+      <RadioButton fx:id="professeur" layoutX="231.0" layoutY="404.0" mnemonicParsing="false" text="Professeur" />
+      <TextField fx:id="nom" layoutX="87.0" layoutY="101.0" />
+      <TextField fx:id="prenom" layoutX="87.0" layoutY="159.0" />
+      <TextField fx:id="email" layoutX="87.0" layoutY="237.0" />
+      <TextField fx:id="mdp" layoutX="87.0" layoutY="322.0" />
+>>>>>>> 2ed14ed91dbb1449e6f5c1f53003eccf1be6b675
+   </children>
+</AnchorPane>

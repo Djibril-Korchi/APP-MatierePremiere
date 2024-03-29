@@ -1,25 +1,57 @@
 package appli;
 
+import appli.user.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
+import java.sql.SQLException;
+
 public class InterfaceAdminController {
 
     @FXML
-    private Button bon;
-    @FXML
-    private Button Admin;
+    private Button admin;
 
     @FXML
-    void onClick(ActionEvent event) {
+    private Button boncommande;
 
-        HelloApplication helloApplication= new HelloApplication();
+    @FXML
+    private Button bonmatiere;
+
+    @FXML
+    private Button etat;
+
+    @FXML
+    private Button maj;
+
+    @FXML
+    void OnClickBonCommande(ActionEvent event) {
+        HelloApplication helloApplication =new HelloApplication();
+        helloApplication.sceneConnexion("bonCommande");
+    }
+
+    @FXML
+    void OnClickBonMatiere(ActionEvent event) {
+        HelloApplication helloApplication =new HelloApplication();
         helloApplication.sceneConnexion("bonDebit");
     }
+
+    @FXML
+    void OnclickEtat(ActionEvent event) {
+        HelloApplication helloApplication =new HelloApplication();
+        helloApplication.sceneConnexion("interface");
+    }
+
+    @FXML
+    void onActionRetour(ActionEvent event) throws SQLException {
+        User user = new User();
+        user.status();
+    }
+
     @FXML
     void onClickAdmin(ActionEvent event) {
-        HelloApplication helloApplication= new HelloApplication();
+        HelloApplication helloApplication =new HelloApplication();
         helloApplication.sceneConnexion("Admin");
     }
+
 }

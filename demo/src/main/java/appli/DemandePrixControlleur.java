@@ -1,18 +1,21 @@
 package appli;
 
+import appli.user.User;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+
+import java.sql.SQLException;
 
 public class DemandePrixControlleur {
 
-private Button retour;
+    @FXML
+    private Button valider;
 
-
-void onClickRetour(ActionEvent event) {
-    HelloApplication helloApplication = new HelloApplication();
-    helloApplication.sceneConnexion("interface");
-
-
-}
+    @FXML
+    void onActionRetour(ActionEvent event) throws SQLException {
+        User user = new User();
+        user.status();
+    }
 
 }
