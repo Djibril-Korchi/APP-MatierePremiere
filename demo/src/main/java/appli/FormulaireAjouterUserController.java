@@ -45,13 +45,7 @@ public class FormulaireAjouterUserController {
     }
 
     @FXML
-<<<<<<< HEAD
-        void onClickValider(ActionEvent event) throws SQLException {
-            String nom = this.nom+"";
-            String prenom =this.prenom+"";
-            String email =this.email+"";
-            String mdp = this.mdp+"";
-=======
+
     void onClickValider(ActionEvent event) throws SQLException {
         String nom = this.nom.getText();
         String prenom =this.prenom.getText()+"";
@@ -64,7 +58,7 @@ public class FormulaireAjouterUserController {
         } else if (professeur.isSelected()) {
             status = 2;
         }
->>>>>>> 2ed14ed91dbb1449e6f5c1f53003eccf1be6b675
+
         HelloApplication helloApplication = new HelloApplication();
         Bdd bdd = new Bdd();
         Statement requeteSimple = bdd.getMaConnection().createStatement();

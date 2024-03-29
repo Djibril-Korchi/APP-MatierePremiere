@@ -17,7 +17,7 @@ public class User {
         this.mdp = mdp;
     }
     public User(){
-        
+
     }
     public void status() throws SQLException {
         Bdd bdd = new Bdd();
