@@ -20,4 +20,13 @@ public class InterfaceController {
 
     public void onClickMaj(ActionEvent actionEvent) {
     }
+
+    public void onClickBon(ActionEvent actionEvent) {
+    }
+
+    public void onClickBdc(ActionEvent actionEvent) {
+    }
+
+    public void onClickEds(ActionEvent actionEvent) {
+    }
 }

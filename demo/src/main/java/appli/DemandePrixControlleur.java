@@ -18,4 +18,9 @@ public class DemandePrixControlleur {
         user.status();
     }
 
+    public void onClickValider(ActionEvent actionEvent) {
+    }
+
+    public void onClickRetour(ActionEvent actionEvent) {
+    }
 }
