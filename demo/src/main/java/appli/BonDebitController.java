@@ -23,6 +23,8 @@ public class BonDebitController implements Initializable {
     @FXML
     private ComboBox professeur;
     @FXML
+    private ComboBox classe;
+    @FXML
     private Button valider;
 
     @FXML
@@ -48,6 +50,34 @@ public class BonDebitController implements Initializable {
         while (resultatsRequetes.next()){
             this.professeur.getItems().add(resultatsRequetes.getString(1));
         }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        try{
+            Bdd bdd = new Bdd();
+            HelloApplication helloApplication= new HelloApplication();
+            Statement requeteSimple = bdd.getMaConnection().createStatement();
+            PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
+                    "SELECT libelle FROM classe");
+
+            ResultSet resultatsRequetes = requetePrepare.executeQuery();
+            while (resultatsRequetes.next()){
+                this.classe.getItems().add(resultatsRequetes.getString(1));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        try{
+            Bdd bdd = new Bdd();
+            HelloApplication helloApplication= new HelloApplication();
+            Statement requeteSimple = bdd.getMaConnection().createStatement();
+            PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
+                    "SELECT libelle FROM system");
+
+            ResultSet resultatsRequetes = requetePrepare.executeQuery();
+            while (resultatsRequetes.next()){
+                this.classe.getItems().add(resultatsRequetes.getString(1));
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -33,11 +33,13 @@ public class AdminController {
     }
 
     @FXML
-    void onClickSuprimer(ActionEvent event) throws SQLException {
-        User user = new User();
-        user.status();
+    void onClickSuprimer(ActionEvent event) {
+
     }
 
-    public void onClickRetour(ActionEvent actionEvent) {
+    public void onClickRetour(ActionEvent actionEvent) throws SQLException {
+        System.out.println(User.getCompte());
+        User user = new User();
+        user.status();
     }
 }

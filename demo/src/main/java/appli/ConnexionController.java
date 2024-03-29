@@ -21,7 +21,7 @@ public class ConnexionController {
     protected void onHelloButtonClick() throws SQLException {
         String email = this.email.getText();
         String mdp = this.mdp.getText();
-        User user = new User(email,mdp);
+
         Bdd bdd = new Bdd();
         HelloApplication helloApplication= new HelloApplication();
         Statement requeteSimple = bdd.getMaConnection().createStatement();
@@ -31,7 +31,10 @@ public class ConnexionController {
         requetePrepare.setString(1,email);
         requetePrepare.setString(2,mdp);
         ResultSet connection = requetePrepare.executeQuery();
+
         if (connection.next()){
+            User user = new User(connection.getInt(6));
+            System.out.println(User.getCompte());
             if (connection.getInt(6)==1){
                 helloApplication.sceneConnexion("interfaceAdmin");
             }else {
