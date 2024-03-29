@@ -11,7 +11,7 @@
          <font>
             <Font size="36.0" />
          </font>
-      </Text>
+      </Text>  b
       <Button fx:id="ajouter" layoutX="156.0" layoutY="168.0" mnemonicParsing="false" onAction="#onClickAjouter" prefHeight="54.0" prefWidth="110.0" text="Ajouter">
          <font>
             <Font size="18.0" />
