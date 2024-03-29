@@ -13,8 +13,20 @@ public class InterfaceController {
     private Button bon;
 
     @FXML
-    void onActionRetour(ActionEvent event) throws SQLException {
+    void onClicRetour(ActionEvent event) throws SQLException {
         User user = new User();
         user.status();
+    }
+
+    public void onClickMaj(ActionEvent actionEvent) {
+    }
+
+    public void onClickBon(ActionEvent actionEvent) {
+    }
+
+    public void onClickBdc(ActionEvent actionEvent) {
+    }
+
+    public void onClickEds(ActionEvent actionEvent) {
     }
 }

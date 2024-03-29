@@ -17,10 +17,11 @@ public class BonCommandeControlleur {
     private Button valider;
 
     @FXML
-    void onActionRetour(ActionEvent event) throws SQLException {
+    void onClickRetour(ActionEvent event) throws SQLException {
         User user = new User();
         user.status();
     }
+
     @FXML
     void onClickValider(ActionEvent event) {
 

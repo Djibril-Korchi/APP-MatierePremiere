@@ -14,13 +14,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> a1ae05718865038909a2dd6b04eac649aeecb05b
->>>>>>> 6a8d8b097869388b840cb1af8306cdc9d264959b
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.DemandePrixControlleur">
    <children>
       <Accordion />
@@ -53,15 +47,11 @@
             <Text layoutX="39.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEMANDE DE PRIX" wrappingWidth="114.01692962646484" />
          </children>
       </Pane>
-<<<<<<< HEAD
+
       <Button fx:id="BoutonRetour" layoutX="6.0" layoutY="362.0" mnemonicParsing="false" onAction="#onClickRetour" text="Retour" />
-=======
-<<<<<<< HEAD
+
       <Button layoutX="6.0" layoutY="362.0" mnemonicParsing="false" text="Retour" />
       <Button fx:id="valider" layoutX="67.0" layoutY="362.0" mnemonicParsing="false" onAction="#onClickValider" text="Valider" />
-=======
-      <Button fx:id="BoutonRetour" layoutX="6.0" layoutY="362.0" mnemonicParsing="false" onAction="#onClickRetour" text="Retour" />
->>>>>>> a1ae05718865038909a2dd6b04eac649aeecb05b
->>>>>>> 6a8d8b097869388b840cb1af8306cdc9d264959b
+
    </children>
 </AnchorPane>
