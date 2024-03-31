@@ -54,6 +54,14 @@ public class InterfaceAdminController {
         helloApplication.sceneConnexion("Admin");
     }
 
+<<<<<<< HEAD
     public void onClickMaj(ActionEvent actionEvent) {
+=======
+
+    public void OnclickMaj(ActionEvent event) {
+
+
+
+>>>>>>> ebd0572aef5a7b88592a409922d0dc11d751bd80
     }
 }

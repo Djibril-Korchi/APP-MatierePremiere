@@ -34,14 +34,26 @@ public class AdminController {
     }
 
     @FXML
+<<<<<<< HEAD
     void onClickRetour(ActionEvent event) throws SQLException {
         User user = new User();
         user.status();
     }
 
     @FXML
+=======
+>>>>>>> ebd0572aef5a7b88592a409922d0dc11d751bd80
     void onClickSuprimer(ActionEvent event) {
         HelloApplication helloApplication = new HelloApplication();
         helloApplication.sceneConnexion("SupprimerFormullaire");
     }
+<<<<<<< HEAD
+=======
+
+    public void onClickRetour(ActionEvent actionEvent) throws SQLException {
+        System.out.println(User.getCompte());
+        User user = new User();
+        user.status();
+    }
+>>>>>>> ebd0572aef5a7b88592a409922d0dc11d751bd80
 }

@@ -9,30 +9,26 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class User {
-    private String email;
-    private String mdp;
+    private static int compte;
+    private int status;
 
-    public User(String email, String mdp) {
-        this.email = email;
-        this.mdp = mdp;
+    public User(int status) {
+        this.status=status;
+        User.compte=status;
     }
     public User(){
-        
+
     }
     public void status() throws SQLException {
-        Bdd bdd = new Bdd();
-        HelloApplication helloApplication= new HelloApplication();
-        Statement requeteSimple = bdd.getMaConnection().createStatement();
-        PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
-                "SELECT * FROM user WHERE email=? and mdp=?"
-        );
-        requetePrepare.setString(1,this.email);
-        requetePrepare.setString(2,this.mdp);
-        ResultSet connection = requetePrepare.executeQuery();
-        if (connection.getInt(6)==1){
+       HelloApplication helloApplication = new HelloApplication();
+        if (User.getCompte()==1){
             helloApplication.sceneConnexion("interfaceAdmin");
         }else {
             helloApplication.sceneConnexion("interface");
         }
+    }
+
+    public static int getCompte() {
+        return compte;
     }
 }

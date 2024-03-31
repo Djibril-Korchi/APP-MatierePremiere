@@ -18,7 +18,15 @@ public class DemandePrixControlleur {
         helloApplication.sceneConnexion("interface");
     }
 
+<<<<<<< HEAD
 
     public void onClickValider(ActionEvent actionEvent) {
     }
+=======
+    public void onClickValider(ActionEvent actionEvent) {
+    }
+
+    public void onClickRetour(ActionEvent actionEvent) {
+    }
+>>>>>>> ebd0572aef5a7b88592a409922d0dc11d751bd80
 }
