@@ -29,18 +29,19 @@ public class AdminController {
 
     @FXML
     void onClickModifier(ActionEvent event) {
-
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("ModifierFormulaire");
     }
 
     @FXML
-    void onActionRetour(ActionEvent event) throws SQLException {
+    void onClickRetour(ActionEvent event) throws SQLException {
         User user = new User();
         user.status();
     }
 
     @FXML
     void onClickSuprimer(ActionEvent event) {
-
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("SupprimerFormullaire");
     }
-
 }

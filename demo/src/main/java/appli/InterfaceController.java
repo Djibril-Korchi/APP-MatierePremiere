@@ -13,8 +13,24 @@ public class InterfaceController {
     private Button bon;
 
     @FXML
-    void onActionRetour(ActionEvent event) throws SQLException {
-        User user = new User();
-        user.status();
+    void onClickRetour(ActionEvent event) throws SQLException {
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("interface");
+    }
+
+    public void onClickMaj(ActionEvent actionEvent) {
+    }
+
+    public void onClickBon(ActionEvent actionEvent) {
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("bonDebit");
+    }
+
+    public void onClickBdc(ActionEvent actionEvent) {
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("bonCommande");
+    }
+
+    public void onClickEds(ActionEvent actionEvent) {
     }
 }

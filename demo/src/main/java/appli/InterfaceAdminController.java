@@ -43,9 +43,9 @@ public class InterfaceAdminController {
     }
 
     @FXML
-    void onActionRetour(ActionEvent event) throws SQLException {
-        User user = new User();
-        user.status();
+    void onClickRetour(ActionEvent event) throws SQLException {
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("connexion");
     }
 
     @FXML
@@ -54,4 +54,6 @@ public class InterfaceAdminController {
         helloApplication.sceneConnexion("Admin");
     }
 
+    public void onClickMaj(ActionEvent actionEvent) {
+    }
 }
