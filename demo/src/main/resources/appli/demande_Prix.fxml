@@ -38,7 +38,7 @@
       <TextArea layoutX="-7.0" layoutY="234.0" prefHeight="36.0" prefWidth="200.0" text="Professeur qui commande:&#10;&#10;" />
       <ImageView fitHeight="154.0" fitWidth="130.0" layoutX="458.0" layoutY="201.0">
          <image>
-            <Image url="@../../../../../../../../Users/rayan/Downloads/50-Lycee-Robert-Schuman-removebg-preview.png" />
+            <Image url="lprs.png" />
          </image>
       </ImageView>
       <TextField layoutY="328.0" prefHeight="26.0" prefWidth="445.0" text="Fournisseur : &quot;Nom&quot;, &quot;Adresse&quot;, &quot;Code postal&quot;, &quot;Interlocuteur&quot;, &quot;Telephone&quot;" />
