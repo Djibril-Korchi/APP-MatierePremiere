@@ -11,136 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.BonDebitController">
-
+<AnchorPane prefHeight="705.0" prefWidth="829.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text layoutX="226.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bon de débit matière">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Text>
-      <Text layoutX="30.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom du Proffesseur :" wrappingWidth="93.39688110351562" />
-      <Text layoutX="30.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filière : " />
-      <Text layoutX="89.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TU :" />
-      <CheckBox layoutX="121.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-      <Text layoutX="160.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPRP :" />
-      <CheckBox layoutX="202.0" layoutY="126.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-      <Text layoutX="241.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CQPM :" />
-      <CheckBox layoutX="289.0" layoutY="125.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-      <ImageView fitHeight="170.0" fitWidth="160.0" layoutX="633.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: white;">
-         <image>
-            <Image url="@../../../../image/lprs.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="30.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classe:" />
-      <Text layoutX="30.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Système: " />
-      <Text layoutX="30.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pièce:" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="679.0" prefWidth="805.0" style="-fx-background-color: white;">
-         <children>
-            <Text layoutX="226.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bon de débit matière">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Text>
-            <Text layoutX="30.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom du Proffesseur :" wrappingWidth="93.39688110351562" />
-            <Text layoutX="30.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filière : " />
-            <Text layoutX="89.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TU :" />
-            <CheckBox layoutX="121.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <Text layoutX="160.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPRP :" />
-            <CheckBox layoutX="202.0" layoutY="126.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <Text layoutX="241.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CQPM :" />
-            <CheckBox layoutX="289.0" layoutY="125.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <ImageView fitHeight="170.0" fitWidth="160.0" layoutX="633.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: white;">
-               <image>
-                  <Image url="@../../../../image/lprs.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="30.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classe:" />
-            <Text layoutX="30.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Système: " />
-            <Text layoutX="30.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pièce:" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="679.0" prefWidth="805.0" style="-fx-background-color: white;">
-         <children>
-            <Text layoutX="226.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bon de débit matière">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Text>
-            <Text layoutX="30.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom du Proffesseur :" wrappingWidth="93.39688110351562" />
-            <Text layoutX="30.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filière : " />
-            <Text layoutX="89.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TU :" />
-            <CheckBox layoutX="121.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <Text layoutX="160.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPRP :" />
-            <CheckBox layoutX="202.0" layoutY="126.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <Text layoutX="241.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CQPM :" />
-            <CheckBox layoutX="289.0" layoutY="125.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <ImageView fitHeight="170.0" fitWidth="160.0" layoutX="633.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: white;">
-               <image>
-                  <Image url="@../../../../image/lprs.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="30.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classe:" />
-            <Text layoutX="30.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Système: " />
-            <Text layoutX="30.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pièce:" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="679.0" prefWidth="805.0" style="-fx-background-color: white;">
-         <children>
-            <Text layoutX="226.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bon de débit matière">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Text>
-            <Text layoutX="30.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom du Proffesseur :" wrappingWidth="93.39688110351562" />
-            <Text layoutX="30.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filière : " />
-            <Text layoutX="89.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TU :" />
-            <CheckBox layoutX="121.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <Text layoutX="160.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPRP :" />
-            <CheckBox layoutX="202.0" layoutY="126.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <Text layoutX="241.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CQPM :" />
-            <CheckBox layoutX="289.0" layoutY="125.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <ImageView fitHeight="170.0" fitWidth="160.0" layoutX="633.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: white;">
-               <image>
-                  <Image url="@../../../../image/lprs.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="30.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classe:" />
-            <Text layoutX="30.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Système: " />
-            <Text layoutX="30.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pièce:" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="679.0" prefWidth="805.0" style="-fx-background-color: white;">
-         <children>
-            <Text layoutX="226.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bon de débit matière">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Text>
-            <Text layoutX="30.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom du Proffesseur :" wrappingWidth="93.39688110351562" />
-            <Text layoutX="30.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filière : " />
-            <Text layoutX="89.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TU :" />
-            <CheckBox layoutX="121.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <Text layoutX="160.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPRP :" />
-            <CheckBox layoutX="202.0" layoutY="126.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <Text layoutX="241.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CQPM :" />
-            <CheckBox layoutX="289.0" layoutY="125.0" mnemonicParsing="false" style="-fx-background-color: white;" textFill="WHITE" />
-            <ImageView fitHeight="170.0" fitWidth="160.0" layoutX="633.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: white;">
-               <image>
-                  <Image url="@../../../../image/lprs.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="30.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classe:" />
-            <Text layoutX="30.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Système: " />
-            <Text layoutX="30.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pièce:" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="689.0" prefWidth="822.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="13.0" layoutY="14.0" prefHeight="691.0" prefWidth="803.0" style="-fx-background-color: white;">
          <children>
             <Text layoutX="226.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bon de débit matière">
                <font>
@@ -183,7 +56,6 @@
             <ImageView fitHeight="159.0" fitWidth="182.0" layoutX="546.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true" />
             <TextArea layoutX="364.0" layoutY="523.0" prefHeight="39.0" prefWidth="94.0" text="Saisie quantité" />
             <TextArea layoutX="595.0" layoutY="503.0" prefHeight="39.0" prefWidth="208.0" style="-fx-background-color: green;" text="Calcul de la longueur totale débitée" />
-
             <Button fx:id="retour" layoutX="19.0" layoutY="648.0" mnemonicParsing="false" onAction="#onActionRetour" text="Retour" />
             <Button fx:id="valider" layoutX="87.0" layoutY="647.0" mnemonicParsing="false" onAction="#onClickValider" text="Valider" />
             <ComboBox fx:id="professeur" layoutX="140.0" layoutY="88.0" prefWidth="150.0" />
@@ -192,7 +64,6 @@
             <ComboBox fx:id="piece" layoutX="65.0" layoutY="283.0" prefWidth="150.0" />
             <ComboBox fx:id="forme" layoutX="65.0" layoutY="324.0" prefWidth="150.0" />
             <ComboBox fx:id="dimension" layoutX="65.0" layoutY="363.0" prefWidth="150.0" />
-
          </children>
       </AnchorPane>
    </children>
