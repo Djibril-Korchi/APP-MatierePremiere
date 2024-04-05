@@ -24,8 +24,10 @@ public class BonDebitController implements Initializable {
     private ComboBox professeur;
     @FXML
     private ComboBox classe;
+    @FXML
     private ComboBox piece;
     private ComboBox system;
+    @FXML
     private ComboBox forme;
     @FXML
     private Button valider;
