@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 29 mars 2024 à 08:03
+-- Généré le : ven. 29 mars 2024 à 09:27
 -- Version du serveur : 8.2.0
 -- Version de PHP : 8.2.13
 
@@ -307,6 +307,13 @@ ALTER TABLE `matiere`
 --
 ALTER TABLE `piece`
   ADD CONSTRAINT `fk_piece_system` FOREIGN KEY (`ref_system`) REFERENCES `system` (`id_system`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Contraintes pour la table `possede`
+--
+ALTER TABLE `possede`
+  ADD CONSTRAINT `fk_possede_materiaux` FOREIGN KEY (`ref_materiaux`) REFERENCES `materiaux` (`id_materiaux`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `fk_possede_matiere` FOREIGN KEY (`ref_matiere`) REFERENCES `matiere` (`id_matiere`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
 -- Contraintes pour la table `user`
