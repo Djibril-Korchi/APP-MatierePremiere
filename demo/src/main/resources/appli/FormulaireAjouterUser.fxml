@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.Button?>
-<<<<<<< HEAD
 <?import javafx.scene.control.CheckBox?>
-=======
-
->>>>>>> ebd0572aef5a7b88592a409922d0dc11d751bd80
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -49,7 +45,7 @@
       <Button fx:id="valider" layoutX="197.0" layoutY="467.0" mnemonicParsing="false" onAction="#onClickValider" prefHeight="39.0" prefWidth="82.0" text="Valider" />
       <ImageView fitHeight="170.0" fitWidth="160.0" layoutX="576.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: white;">
          <image>
-            <Image url="@../../../../image/lprs.png" />
+            <Image url="@../lprs.png" />
          </image>
       </ImageView>
       <Button fx:id="retour" layoutX="14.0" layoutY="540.0" mnemonicParsing="false" onAction="#OnClickRetour" text="Retour" />

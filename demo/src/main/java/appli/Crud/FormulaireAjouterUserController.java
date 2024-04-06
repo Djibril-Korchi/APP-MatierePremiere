@@ -59,10 +59,6 @@ public class FormulaireAjouterUserController {
         } else if (professeur.isSelected()) {
             status = 2;
         }
-<<<<<<< HEAD:demo/src/main/java/appli/Crud/FormulaireAjouterUserController.java
-=======
-
->>>>>>> ebd0572aef5a7b88592a409922d0dc11d751bd80:demo/src/main/java/appli/FormulaireAjouterUserController.java
         HelloApplication helloApplication = new HelloApplication();
         Bdd bdd = new Bdd();
         Statement requeteSimple = bdd.getMaConnection().createStatement();
