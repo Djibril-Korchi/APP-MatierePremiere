@@ -22,19 +22,19 @@ public class BonDebitController implements Initializable {
     private Button afficher;
 
     @FXML
-    private ComboBox<?> classe;
+    private ComboBox<String> classe;
 
     @FXML
-    private ComboBox<?> dimension;
+    private ComboBox<String> dimension;
 
     @FXML
-    private ComboBox<?> forme;
+    private ComboBox<String> forme;
 
     @FXML
-    private ComboBox<?> piece;
+    private ComboBox<String> piece;
 
     @FXML
-    private ComboBox<?> proffesseur;
+    private ComboBox<String> professeur;
 
     @FXML
     private TextField quantite;
@@ -42,12 +42,11 @@ public class BonDebitController implements Initializable {
     @FXML
     private Button retour;
     @FXML
-    private ComboBox<?> systeme;
-
-    private ComboBox professeur;
+    private ComboBox<String> systeme;
 
     @FXML
     private Button valider;
+
 
     @FXML
     void onActionRetour(ActionEvent event) {
@@ -83,11 +82,71 @@ public class BonDebitController implements Initializable {
 
             ResultSet resultatsRequetes = requetePrepare.executeQuery();
             while (resultatsRequetes.next()){
-                this.classe.getItems();
+
+                this.classe.getItems().add(resultatsRequetes.getString(1));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-       
+
+        try{
+            Bdd bdd = new Bdd();
+            HelloApplication helloApplication= new HelloApplication();
+            Statement requeteSimple = bdd.getMaConnection().createStatement();
+            PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
+                    "SELECT libelle FROM system");
+
+            ResultSet resultatsRequetes = requetePrepare.executeQuery();
+            while (resultatsRequetes.next()){
+                this.systeme.getItems().add(resultatsRequetes.getString(1));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        try{
+            Bdd bdd = new Bdd();
+            HelloApplication helloApplication= new HelloApplication();
+            Statement requeteSimple = bdd.getMaConnection().createStatement();
+            PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
+                    "SELECT libelle FROM piece");
+
+            ResultSet resultatsRequetes = requetePrepare.executeQuery();
+            while (resultatsRequetes.next()){
+                this.piece.getItems().add(resultatsRequetes.getString(1));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        try{
+            Bdd bdd = new Bdd();
+            HelloApplication helloApplication= new HelloApplication();
+            Statement requeteSimple = bdd.getMaConnection().createStatement();
+            PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
+                    "SELECT libelle FROM forme");
+
+            ResultSet resultatsRequetes = requetePrepare.executeQuery();
+            while (resultatsRequetes.next()){
+                this.forme.getItems().add(resultatsRequetes.getString(1));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        try{
+            Bdd bdd = new Bdd();
+            HelloApplication helloApplication= new HelloApplication();
+            Statement requeteSimple = bdd.getMaConnection().createStatement();
+            PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
+                    "SELECT libelle FROM piece");
+
+            ResultSet resultatsRequetes = requetePrepare.executeQuery();
+            while (resultatsRequetes.next()){
+                this.piece.getItems().add(resultatsRequetes.getString(1));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 }
