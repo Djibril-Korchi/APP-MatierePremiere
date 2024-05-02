@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 29 mars 2024 à 09:27
+-- Généré le : jeu. 02 mai 2024 à 11:35
 -- Version du serveur : 8.2.0
 -- Version de PHP : 8.2.13
 
@@ -90,6 +90,34 @@ CREATE TABLE IF NOT EXISTS `debit` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `decrit`
+--
+
+DROP TABLE IF EXISTS `decrit`;
+CREATE TABLE IF NOT EXISTS `decrit` (
+  `ref_forme` int NOT NULL,
+  `ref_dimension` int NOT NULL,
+  KEY `fk_decrit_dimension` (`ref_dimension`),
+  KEY `fk_decrit_forme` (`ref_forme`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `dimension`
+--
+
+DROP TABLE IF EXISTS `dimension`;
+CREATE TABLE IF NOT EXISTS `dimension` (
+  `id_dimension` int NOT NULL AUTO_INCREMENT,
+  `dimension` varchar(50) NOT NULL,
+  `diametre` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_dimension`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `filiere`
 --
 
@@ -110,7 +138,6 @@ DROP TABLE IF EXISTS `forme`;
 CREATE TABLE IF NOT EXISTS `forme` (
   `id_forme` int NOT NULL AUTO_INCREMENT,
   `forme` varchar(50) NOT NULL,
-  `diametre` int NOT NULL,
   PRIMARY KEY (`id_forme`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -169,7 +196,6 @@ CREATE TABLE IF NOT EXISTS `materiaux` (
 DROP TABLE IF EXISTS `matiere`;
 CREATE TABLE IF NOT EXISTS `matiere` (
   `id_matiere` int NOT NULL AUTO_INCREMENT,
-  `longueur` int NOT NULL,
   `quantite` int NOT NULL,
   `prix` float NOT NULL,
   `ref_fournisseure` int NOT NULL,
@@ -190,6 +216,8 @@ CREATE TABLE IF NOT EXISTS `piece` (
   `id_piece` int NOT NULL AUTO_INCREMENT,
   `libelle` varchar(50) NOT NULL,
   `image` text NOT NULL,
+  `longueur` int NOT NULL,
+  `quantite` int NOT NULL,
   `ref_system` int NOT NULL,
   PRIMARY KEY (`id_piece`),
   KEY `fk_piece_system` (`ref_system`)
@@ -220,14 +248,15 @@ CREATE TABLE IF NOT EXISTS `status` (
   `id_status` int NOT NULL AUTO_INCREMENT,
   `role` varchar(11) NOT NULL,
   PRIMARY KEY (`id_status`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `status`
 --
 
 INSERT INTO `status` (`id_status`, `role`) VALUES
-(1, 'admin');
+(1, 'admin'),
+(2, 'professeur');
 
 -- --------------------------------------------------------
 
@@ -239,7 +268,7 @@ DROP TABLE IF EXISTS `system`;
 CREATE TABLE IF NOT EXISTS `system` (
   `id_system` int NOT NULL AUTO_INCREMENT,
   `libelle` varchar(50) NOT NULL,
-  `image` varchar(50) NOT NULL,
+  `image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`id_system`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -259,14 +288,16 @@ CREATE TABLE IF NOT EXISTS `user` (
   `ref_status` int NOT NULL,
   PRIMARY KEY (`id_user`),
   KEY `fk_user_status` (`ref_status`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`id_user`, `nom`, `prenom`, `email`, `mdp`, `ref_status`) VALUES
-(1, 'Korchi', 'Djibril', 'd.korchi@lprs.fr', 'azerty', 1);
+(1, 'Korchi', 'Djibril', 'd.korchi@lprs.fr', 'azerty', 1),
+(2, 'a', 'a', 'a', 'a', 1),
+(6, 'a', 'a', 'a', 'a', 2);
 
 --
 -- Contraintes pour les tables déchargées
@@ -289,6 +320,13 @@ ALTER TABLE `commande`
 --
 ALTER TABLE `debit`
   ADD CONSTRAINT `fk_debit_classe` FOREIGN KEY (`ref_classe`) REFERENCES `classe` (`id_classe`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Contraintes pour la table `decrit`
+--
+ALTER TABLE `decrit`
+  ADD CONSTRAINT `fk_decrit_dimension` FOREIGN KEY (`ref_dimension`) REFERENCES `dimension` (`id_dimension`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `fk_decrit_forme` FOREIGN KEY (`ref_forme`) REFERENCES `forme` (`id_forme`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
 -- Contraintes pour la table `lier`

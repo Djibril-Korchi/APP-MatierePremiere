@@ -1,13 +1,5 @@
+
 package appli;
-
-import bdd.Bdd;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
-
 import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,6 +7,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import appli.user.User;
+import bdd.Bdd;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+
 
 public class BonDebitController implements Initializable {
 
@@ -22,7 +24,22 @@ public class BonDebitController implements Initializable {
     private Button afficher;
 
     @FXML
+    private TextField apres;
+
+    @FXML
+    private TextField avant;
+
+    @FXML
+    private Button calcul;
+
+    @FXML
     private ComboBox<String> classe;
+
+    @FXML
+    private RadioButton cprp;
+
+    @FXML
+    private RadioButton cqpm;
 
     @FXML
     private ComboBox<String> dimension;
@@ -31,7 +48,13 @@ public class BonDebitController implements Initializable {
     private ComboBox<String> forme;
 
     @FXML
+    private RadioButton fs;
+
+    @FXML
     private ComboBox<String> piece;
+
+    @FXML
+    private ImageView pieceImage;
 
     @FXML
     private ComboBox<String> professeur;
@@ -41,15 +64,78 @@ public class BonDebitController implements Initializable {
 
     @FXML
     private Button retour;
+
+    @FXML
+    private TextField stock;
+
+    @FXML
+    private ImageView system;
+
     @FXML
     private ComboBox<String> systeme;
 
     @FXML
-    private Button valider;
-
+    private TextField total;
 
     @FXML
-    void onActionRetour(ActionEvent event) {
+    private RadioButton tu;
+
+    @FXML
+    private Button valider;
+
+    public TextField getQuantite() {
+        return quantite;
+    }
+
+    public ComboBox<String> getSysteme() {
+        return systeme;
+    }
+
+    public ImageView getPieceImage() {
+        return pieceImage;
+    }
+
+    public ComboBox<String> getForme() {
+        return forme;
+    }
+
+    public ComboBox<String> getPiece() {
+        return piece;
+    }
+
+    @FXML
+    void onActionRetour(ActionEvent event) throws SQLException {
+        User user = new User();
+        user.status();
+    }
+    @FXML
+    void onClickAfficher(ActionEvent event) {
+        try {
+            Bdd bdd = new Bdd();
+            PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
+                    "SELECT image FROM system WHERE libelle = ?");
+            requetePrepare.setString(1,getSysteme()+"");
+            ResultSet resultatsRequetes = requetePrepare.executeQuery();
+            if (resultatsRequetes.next()) {
+                Image image = new Image(resultatsRequetes.getString(1));
+                this.system.setImage(image);
+            }
+            requetePrepare = bdd.getMaConnection().prepareStatement(
+                    "SELECT image FROM piece WHERE libelle = ?");
+            requetePrepare.setString(1,getPieceImage()+"");
+            resultatsRequetes = requetePrepare.executeQuery();
+            if (resultatsRequetes.next()) {
+                Image image = new Image(resultatsRequetes.getString(1));
+                this.pieceImage.setImage(image);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @FXML
+    void onClickCalcul(ActionEvent event) throws SQLException {
+        Stock stock1 = new Stock();
+        total.setText(stock1.longueurdebite(getQuantite().getText(),getPiece().getItems()+"")+"");
 
     }
     @FXML
@@ -59,94 +145,69 @@ public class BonDebitController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try{
-        Bdd bdd = new Bdd();
-        HelloApplication helloApplication= new HelloApplication();
-        Statement requeteSimple = bdd.getMaConnection().createStatement();
-        PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
-                "SELECT nom FROM user WHERE ref_status =(SELECT id_status FROM status WHERE role = 'professeur')");
 
-        ResultSet resultatsRequetes = requetePrepare.executeQuery();
-        while (resultatsRequetes.next()){
-            this.professeur.getItems().add(resultatsRequetes.getString(1));
-        }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        try{
+        try {
             Bdd bdd = new Bdd();
-            HelloApplication helloApplication= new HelloApplication();
-            Statement requeteSimple = bdd.getMaConnection().createStatement();
             PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
                     "SELECT libelle FROM classe");
 
             ResultSet resultatsRequetes = requetePrepare.executeQuery();
-            while (resultatsRequetes.next()){
-
+            while (resultatsRequetes.next()) {
                 this.classe.getItems().add(resultatsRequetes.getString(1));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-        try{
+        try {
             Bdd bdd = new Bdd();
-            HelloApplication helloApplication= new HelloApplication();
-            Statement requeteSimple = bdd.getMaConnection().createStatement();
             PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
-                    "SELECT libelle FROM system");
+                    "SELECT libelle FROM `system`");
 
             ResultSet resultatsRequetes = requetePrepare.executeQuery();
-            while (resultatsRequetes.next()){
+            while (resultatsRequetes.next()) {
                 this.systeme.getItems().add(resultatsRequetes.getString(1));
             }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-        try{
+        try {
             Bdd bdd = new Bdd();
-            HelloApplication helloApplication= new HelloApplication();
-            Statement requeteSimple = bdd.getMaConnection().createStatement();
             PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
-                    "SELECT libelle FROM piece");
+                    "SELECT s.libelle,p.libelle FROM `system` as s INNER JOIN piece as p ON s.id_system =  p.ref_system");
+
 
             ResultSet resultatsRequetes = requetePrepare.executeQuery();
-            while (resultatsRequetes.next()){
-                this.piece.getItems().add(resultatsRequetes.getString(1));
+            while (resultatsRequetes.next()) {
+                this.piece.getItems().add(resultatsRequetes.getString(1)+" / "+resultatsRequetes.getString(2));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        try{
+        try {
             Bdd bdd = new Bdd();
-            HelloApplication helloApplication= new HelloApplication();
-            Statement requeteSimple = bdd.getMaConnection().createStatement();
             PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
-                    "SELECT libelle FROM forme");
+                    "SELECT forme FROM `forme`");
 
             ResultSet resultatsRequetes = requetePrepare.executeQuery();
-            while (resultatsRequetes.next()){
-                this.forme.getItems().add(resultatsRequetes.getString(1));
+            while (resultatsRequetes.next()) {
+                this.forme.getItems().add(resultatsRequetes.getString(1)+" / "+resultatsRequetes.getString(2));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        try{
+        try {
             Bdd bdd = new Bdd();
-            HelloApplication helloApplication= new HelloApplication();
-            Statement requeteSimple = bdd.getMaConnection().createStatement();
             PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
-                    "SELECT libelle FROM piece");
-
+                    "SELECT d.dimension FROM `dimension` as d INNER JOIN decrit as de ON d.id_dimension =  de.ref_dimension INNER JOIN forme as f ON de.ref_forme = f.forme WHERE f.forme = ? ");
+            String ref = getForme().getItems()+"";
+            requetePrepare.setString(1,ref);
             ResultSet resultatsRequetes = requetePrepare.executeQuery();
-            while (resultatsRequetes.next()){
-                this.piece.getItems().add(resultatsRequetes.getString(1));
+            while (resultatsRequetes.next()) {
+                this.dimension.getItems().add(resultatsRequetes.getString(1)+" / "+resultatsRequetes.getString(2));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 }
