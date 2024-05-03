@@ -1,6 +1,6 @@
 package appli;
 
-import appli.user.User;
+import entity.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -29,17 +29,20 @@ public class AdminController {
 
     @FXML
     void onClickModifier(ActionEvent event) {
-
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("ModifierFormulaire");
     }
 
     @FXML
+
     void onClickSuprimer(ActionEvent event) {
-
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("SupprimerFormullaire");
     }
-
     public void onClickRetour(ActionEvent actionEvent) throws SQLException {
         System.out.println(User.getCompte());
         User user = new User();
         user.status();
     }
+
 }

@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.DemandePrixControlleur">
    <children>
       <Accordion />
@@ -38,7 +37,9 @@
       <TextArea layoutX="-7.0" layoutY="234.0" prefHeight="36.0" prefWidth="200.0" text="Professeur qui commande:&#10;&#10;" />
       <ImageView fitHeight="154.0" fitWidth="130.0" layoutX="458.0" layoutY="201.0">
          <image>
-            <Image url="lprs.png" />
+
+            <Image url="@../lprs.png" />
+
          </image>
       </ImageView>
       <TextField layoutY="328.0" prefHeight="26.0" prefWidth="445.0" text="Fournisseur : &quot;Nom&quot;, &quot;Adresse&quot;, &quot;Code postal&quot;, &quot;Interlocuteur&quot;, &quot;Telephone&quot;" />
@@ -47,11 +48,9 @@
             <Text layoutX="39.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEMANDE DE PRIX" wrappingWidth="114.01692962646484" />
          </children>
       </Pane>
-
+      <Button fx:id="valider" layoutX="67.0" layoutY="362.0" mnemonicParsing="false" onAction="#onClickValider" text="Valider" />
       <Button fx:id="BoutonRetour" layoutX="6.0" layoutY="362.0" mnemonicParsing="false" onAction="#onClickRetour" text="Retour" />
 
-      <Button layoutX="6.0" layoutY="362.0" mnemonicParsing="false" text="Retour" />
-      <Button fx:id="valider" layoutX="67.0" layoutY="362.0" mnemonicParsing="false" onAction="#onClickValider" text="Valider" />
 
    </children>
 </AnchorPane>

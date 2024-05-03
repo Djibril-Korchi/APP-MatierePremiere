@@ -1,6 +1,5 @@
 package appli;
 
-import appli.user.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -43,9 +42,9 @@ public class InterfaceAdminController {
     }
 
     @FXML
-    void onActionRetour(ActionEvent event) throws SQLException {
-        User user = new User();
-        user.status();
+    void onClickRetour(ActionEvent event) throws SQLException {
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("connexion");
     }
 
     @FXML
@@ -55,8 +54,13 @@ public class InterfaceAdminController {
     }
 
 
+
     public void OnclickMaj(ActionEvent event) {
         HelloApplication helloApplication =new HelloApplication();
         helloApplication.sceneConnexion("MsjBdd");
+
+    }
+
+    public void onClickMaj(ActionEvent actionEvent) {
     }
 }

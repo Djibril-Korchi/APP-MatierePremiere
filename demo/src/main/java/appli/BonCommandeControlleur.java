@@ -1,7 +1,6 @@
 package appli;
 
-import appli.HelloApplication;
-import appli.user.User;
+import entity.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -20,6 +19,7 @@ public class BonCommandeControlleur {
     void onClickRetour(ActionEvent event) throws SQLException {
         User user = new User();
         user.status();
+
     }
 
     @FXML
@@ -27,5 +27,4 @@ public class BonCommandeControlleur {
 
 
     }
-
 }

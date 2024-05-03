@@ -1,15 +1,15 @@
-package appli.user;
+package entity;
 
 import appli.HelloApplication;
-import bdd.Bdd;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class User {
     private static int compte;
+    private String nom;
+    private String prenom;
+    private String email;
+    private String mdp;
     private int status;
 
     public User(int status) {

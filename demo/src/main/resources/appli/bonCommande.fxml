@@ -39,10 +39,10 @@
       <Text layoutX="572.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantité" />
       <TableView fx:id="Tableau_Forme" layoutX="144.0" layoutY="306.0" prefHeight="200.0" prefWidth="396.0" style="-fx-background-color: grey;">
         <columns>
-          <TableColumn prefWidth="75.0" text="Forme" />
-          <TableColumn prefWidth="75.0" text="Largeur" />
-            <TableColumn prefWidth="75.0" text="Hauteur" />
-            <TableColumn prefWidth="75.0" text="Longueur" />
+          <TableColumn fx:id="forme" prefWidth="75.0" text="Forme" />
+          <TableColumn fx:id="largueur" prefWidth="75.0" text="Largeur" />
+            <TableColumn fx:id="hauteur" prefWidth="75.0" text="Hauteur" />
+            <TableColumn fx:id="longueur" prefWidth="75.0" text="Longueur" />
             <TableColumn prefWidth="75.0" text="Quantité" />
         </columns>
       </TableView>

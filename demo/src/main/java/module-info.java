@@ -15,4 +15,6 @@ module com.example.demo {
     opens bdd to javafx.fxml;
     exports appli;
     opens appli to javafx.fxml;
+    exports appli.Crud;
+    opens appli.Crud to javafx.fxml;
 }

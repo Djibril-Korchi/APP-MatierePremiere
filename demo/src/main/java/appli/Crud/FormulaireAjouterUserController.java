@@ -1,5 +1,6 @@
-package appli;
+package appli.Crud;
 
+import appli.HelloApplication;
 import bdd.Bdd;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -48,9 +49,9 @@ public class FormulaireAjouterUserController {
 
     void onClickValider(ActionEvent event) throws SQLException {
         String nom = this.nom.getText();
-        String prenom =this.prenom.getText()+"";
-        String email =this.email.getText()+"";
-        String mdp = this.mdp.getText()+"";
+        String prenom =this.prenom.getText();
+        String email =this.email.getText();
+        String mdp = this.mdp.getText();
 
         int status = 0;
         if(admin.isSelected() ){
@@ -58,7 +59,6 @@ public class FormulaireAjouterUserController {
         } else if (professeur.isSelected()) {
             status = 2;
         }
-
         HelloApplication helloApplication = new HelloApplication();
         Bdd bdd = new Bdd();
         Statement requeteSimple = bdd.getMaConnection().createStatement();

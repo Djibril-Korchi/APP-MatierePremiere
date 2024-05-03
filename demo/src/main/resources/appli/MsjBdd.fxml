@@ -15,7 +15,9 @@
       <Button fx:id="retour" layoutX="78.0" layoutY="465.0" mnemonicParsing="false" onAction="#onActionRetour" text="Retour" />
       <ImageView fitHeight="170.0" fitWidth="160.0" layoutX="607.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: white;">
          <image>
-            <Image url="@lprs.png" />
+
+            <Image url="@../lprs.png" />
+
          </image>
       </ImageView>
       <Text layoutX="120.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mise à jour Base de  Données" wrappingWidth="582.8218688964844">
