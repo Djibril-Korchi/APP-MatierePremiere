@@ -32,6 +32,7 @@ public class InterfaceController {
     }
 
     public void onClickEds(ActionEvent actionEvent) {
-
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.sceneConnexion("etatDesStock");
     }
 }
