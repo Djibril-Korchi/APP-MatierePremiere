@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="705.0" prefWidth="829.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="705.0" prefWidth="829.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.BonDebitController">
    <children>
       <AnchorPane layoutX="13.0" layoutY="14.0" prefHeight="691.0" prefWidth="803.0" style="-fx-background-color: white;">
          <children>
@@ -49,15 +49,15 @@
             <Text layoutX="-1.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dimension:" wrappingWidth="62.87652587890625" />
             <Text layoutX="335.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantité: " wrappingWidth="56.4765625" />
             <Text layoutX="458.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Longueur totale débitée : " wrappingWidth="157.276611328125" />
-            <Text layoutX="452.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Longueur totale en stock avant et après débit : " wrappingWidth="93.39688110351562" />
+            <Text layoutX="342.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Longueur totale en stock avant et après débit : " wrappingWidth="93.39688110351562" />
             <Text layoutX="632.0" layoutY="573.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock initial :" />
             <TextArea layoutX="632.0" layoutY="594.0" prefHeight="66.0" prefWidth="94.0" style="-fx-background-color: red;" text="Stock final :" />
             <ImageView fitHeight="159.0" fitWidth="182.0" layoutX="546.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="159.0" fitWidth="182.0" layoutX="546.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true" />
             <TextArea layoutX="364.0" layoutY="523.0" prefHeight="39.0" prefWidth="94.0" text="Saisie quantité" />
             <TextArea layoutX="595.0" layoutY="503.0" prefHeight="39.0" prefWidth="208.0" style="-fx-background-color: green;" text="Calcul de la longueur totale débitée" />
-            <Button fx:id="retour" layoutX="19.0" layoutY="648.0" mnemonicParsing="false" onAction="#onActionRetour" text="Retour" />
-            <Button fx:id="valider" layoutX="87.0" layoutY="647.0" mnemonicParsing="false" onAction="#onClickValider" text="Valider" />
+            <Button fx:id="retour" layoutX="24.0" layoutY="614.0" mnemonicParsing="false" onAction="#onClickRetour" prefHeight="0.0" prefWidth="52.0" text="Retour" />
+            <Button fx:id="valider" layoutX="87.0" layoutY="614.0" mnemonicParsing="false" onAction="#onClickValider" text="Valider" />
             <ComboBox fx:id="professeur" layoutX="140.0" layoutY="88.0" prefWidth="150.0" />
             <ComboBox fx:id="classe" layoutX="65.0" layoutY="206.0" prefWidth="150.0" />
             <ComboBox fx:id="systeme" layoutX="65.0" layoutY="246.0" prefWidth="150.0" />

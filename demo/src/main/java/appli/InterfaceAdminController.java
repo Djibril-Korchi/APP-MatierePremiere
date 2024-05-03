@@ -56,8 +56,7 @@ public class InterfaceAdminController {
 
 
     public void OnclickMaj(ActionEvent event) {
-
-
-
+        HelloApplication helloApplication =new HelloApplication();
+        helloApplication.sceneConnexion("MsjBdd");
     }
 }

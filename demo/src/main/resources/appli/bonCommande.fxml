@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
@@ -32,10 +31,6 @@
       <ComboBox layoutX="90.0" layoutY="126.0" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: blue;" />
       <ComboBox layoutX="90.0" layoutY="236.0" prefHeight="25.0" prefWidth="109.0" style="-fx-background-color: grey;" />
       <Text layoutX="25.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forme :" />
-      <AutoCompleteTextField layoutX="232.0" layoutY="236.0" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: grey;" />
-      <AutoCompleteTextField layoutX="352.0" layoutY="236.0" prefHeight="27.0" prefWidth="66.0" style="-fx-background-color: grey;" />
-      <AutoCompleteTextField layoutX="454.0" layoutY="236.0" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: grey;" />
-      <AutoCompleteTextField layoutX="564.0" layoutY="236.0" prefHeight="27.0" prefWidth="66.0" style="-fx-background-color: grey;" />
       <Text layoutX="251.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="247.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Largeur" />
@@ -51,5 +46,9 @@
             <TableColumn prefWidth="75.0" text="Quantité" />
         </columns>
       </TableView>
+      <TextField layoutX="231.0" layoutY="237.0" prefHeight="25.0" prefWidth="87.0" />
+      <TextField layoutX="342.0" layoutY="237.0" prefHeight="25.0" prefWidth="87.0" />
+      <TextField layoutX="449.0" layoutY="237.0" prefHeight="25.0" prefWidth="87.0" />
+      <TextField layoutX="554.0" layoutY="237.0" prefHeight="25.0" prefWidth="87.0" />
    </children>
 </Pane>

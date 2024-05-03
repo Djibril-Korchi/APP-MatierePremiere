@@ -34,7 +34,7 @@ public class BonDebitController implements Initializable {
 
 
     @FXML
-    void onActionRetour(ActionEvent event) throws SQLException {
+    void onClickRetour(ActionEvent event) throws SQLException {
         User user = new User();
         user.status();
     }
@@ -107,7 +107,7 @@ public class BonDebitController implements Initializable {
             HelloApplication helloApplication= new HelloApplication();
             Statement requeteSimple = bdd.getMaConnection().createStatement();
             PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
-                    "SELECT libelle FROM forme");
+                    "SELECT forme FROM forme");
 
             ResultSet resultatsRequetes = requetePrepare.executeQuery();
             while (resultatsRequetes.next()){
