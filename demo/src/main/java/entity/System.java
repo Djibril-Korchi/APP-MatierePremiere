@@ -14,4 +14,12 @@ public class System{
     public String toString() {
         return this.libelle;
     }
+
+    public int getIdSysteme() {
+        return idSysteme;
+    }
+
+    public String getLibelle() {
+        return libelle;
+    }
 }

@@ -5,12 +5,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import entity.User;
+
+import entity.*;
 import bdd.Bdd;
 import entity.System;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Dimension2D;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
@@ -24,33 +26,28 @@ public class BonDebitController implements Initializable {
     private Button calcul;
 
     @FXML
-    private ComboBox<String> classe;
+    private ComboBox<Classe> classe;
 
     @FXML
     private RadioButton cprp;
 
     @FXML
-    private RadioButton cqpm;
-
-    @FXML
     private ComboBox<String> dimension;
 
     @FXML
-    private ComboBox<String> forme;
+    private ComboBox<Forme> forme;
 
-    @FXML
-    private RadioButton fs;
     @FXML
     private TextField initial;
 
     @FXML
-    private ComboBox<String> piece;
+    private ComboBox<Piece> piece;
 
     @FXML
     private ImageView pieceImage;
 
     @FXML
-    private ComboBox<String> professeur;
+    private TextField professeur;
 
     @FXML
     private TextField quantite;
@@ -71,9 +68,6 @@ public class BonDebitController implements Initializable {
     private TextField total;
 
     @FXML
-    private RadioButton tu;
-
-    @FXML
     private Button valider;
     public TextField getQuantite() {
         return quantite;
@@ -87,12 +81,17 @@ public class BonDebitController implements Initializable {
         return pieceImage;
     }
 
-    public ComboBox<String> getForme() {
+    public ComboBox<Forme> getForme() {
         return forme;
     }
 
-    public ComboBox<String> getPiece() {
+    public ComboBox<Piece> getPiece() {
         return piece;
+    }
+
+    public BonDebitController() throws SQLException {
+        User user = new User();
+        //this.professeur.setText(user.Professeur()); ;
     }
 
     @FXML
@@ -116,6 +115,7 @@ public class BonDebitController implements Initializable {
             throw new RuntimeException(e);
         }
     }
+    @FXML
     void onClickAfficherPiece(ActionEvent event) {
         try {
             Bdd bdd = new Bdd();
@@ -153,11 +153,11 @@ public class BonDebitController implements Initializable {
         try {
             Bdd bdd = new Bdd();
             PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
-                    "SELECT libelle FROM classe");
+                    "SELECT * FROM classe");
 
             ResultSet resultatsRequetes = requetePrepare.executeQuery();
             while (resultatsRequetes.next()) {
-                this.classe.getItems().add(resultatsRequetes.getString(1));
+                this.classe.getItems().add(new Classe(resultatsRequetes.getInt(1),resultatsRequetes.getString(2),resultatsRequetes.getInt(3)));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -178,12 +178,11 @@ public class BonDebitController implements Initializable {
         try {
             Bdd bdd = new Bdd();
             PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
-                    "SELECT s.libelle,p.libelle FROM `system` as s INNER JOIN piece as p ON s.id_system =  p.ref_system");
-
-
+                    "SELECT * FROM `piece` WHERE ref_system= (SELECT id_system FROM system WHERE libelle = ?)");
+            requetePrepare.setString(1,getSysteme().getItems()+"");
             ResultSet resultatsRequetes = requetePrepare.executeQuery();
             while (resultatsRequetes.next()) {
-                this.piece.getItems().add(resultatsRequetes.getString(1)+" / "+resultatsRequetes.getString(2));
+                this.piece.getItems().add(new Piece(resultatsRequetes.getInt(1),resultatsRequetes.getString(2),resultatsRequetes.getInt(4),resultatsRequetes.getInt(5),resultatsRequetes.getInt(6)));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -195,25 +194,25 @@ public class BonDebitController implements Initializable {
 
             ResultSet resultatsRequetes = requetePrepare.executeQuery();
             while (resultatsRequetes.next()) {
-                this.forme.getItems().add(resultatsRequetes.getString(1)+" / "+resultatsRequetes.getString(2));
+                this.forme.getItems().add(new Forme(resultatsRequetes.getInt(1),resultatsRequetes.getString(2)));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        try {
-            Bdd bdd = new Bdd();
-            PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
+        // try {
+            //    Bdd bdd = new Bdd();
+            //    PreparedStatement requetePrepare = bdd.getMaConnection().prepareStatement(
 
-                    "SELECT d.dimension FROM `dimension` as d INNER JOIN decrit as de ON d.id_dimension =  de.ref_dimension INNER JOIN forme as f ON de.ref_forme = f.forme WHERE f.forme = ? ");
-            String ref = getForme().getItems()+"";
-            requetePrepare.setString(1,ref);
-            ResultSet resultatsRequetes = requetePrepare.executeQuery();
-            while (resultatsRequetes.next()) {
-                this.dimension.getItems().add(resultatsRequetes.getString(1)+" / "+resultatsRequetes.getString(2));
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+                    //             "SELECT d.dimension FROM `dimension` as d INNER JOIN decrit as de ON d.id_dimension =  de.ref_dimension INNER JOIN forme as f ON de.ref_forme = f.forme WHERE f.forme = ? ");
+                    //     String ref = getForme().getItems()+"";
+            //    requetePrepare.setString(1,ref);
+            //    ResultSet resultatsRequetes = requetePrepare.executeQuery();
+            //    while (resultatsRequetes.next()) {
+                //        this.dimension.getItems();
+                //    }
+            //} catch (SQLException e) {
+            //    throw new RuntimeException(e);
+        //}
     }
 
 }
